@@ -1,0 +1,412 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: center; /* Center the nav-links */
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 15px 15px; /* Rounded edges */
+    width: 100%;
+    max-width: 100; /* Set the max width */
+    margin: 0 auto;  /* Center the navbar */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 100%; /* Occupy full width */
+    justify-content: space-around; /* Spread links */
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background-color: #FFDB58;
+    color: black;
+}
+
+.menu-toggle {
+    display: none;
+    background-color: #FFDB58;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between; /* Ensures correct order */
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 80px; /* Adjust as needed based on your design */
+        right: 0;
+        background-color: #222;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle.active + .nav-links {
+        display: flex;
+    }
+}
+
+
+/* Left Section Styles */
+.left-section {
+    width: 25%;
+    padding: 20px;
+    background-color: #333;
+    position: fixed;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.left-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: #FFDB58;
+}
+
+.left-section p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #FFDB58;
+}
+
+.left-section .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-section .social-media a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+
+.left-section .social-media a:hover {
+    color: #FFDB58;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 10px;
+        margin-top: 80px; /* Adjust margin to position above the main content */
+    }
+
+    .right-section {
+        width: 100%;
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+/* Right Section Styles */
+.right-section {
+    width: 75%;
+    margin-left: 25%;
+    padding: 20px;
+}
+
+.right-section section {
+    padding: 50px 0;
+    border-bottom: 1px solid #444;
+}
+
+.right-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #FFDB58;
+}
+
+.right-section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Table Styling */
+#skills table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#skills th, #skills td {
+    border: 1px solid #444;
+    padding: 10px;
+}
+
+#skills th {
+    background-color: black;
+    color: #FFDB58;
+    font-weight: bold;
+}
+
+#skills td {
+    text-align: center;
+}
+
+#skills tr:nth-child(even) {
+    background-color: #444;
+}
+
+#skills tr:hover {
+    background-color: #555;
+}
+
+@media (max-width: 768px) {
+    #skills table {
+        overflow-x: auto; /* Ensure horizontal scrolling on smaller screens */
+    }
+}
+
+/* Projects Styling */
+.project1, .project2 {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #FFDB58; /* Add border to differentiate */
+}
+
+.project1 h3, .project2 h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FFDB58;
+}
+
+.project1 p, .project2 p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.project1 a, .project2 a {
+    color: #FFDB58;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project1 a:hover, .project2 a:hover {
+    color: white;
+}
+
+.project1 strong, .project2 strong {
+    color: #FFDB58;
+}
+
+@media (max-width: 768px) {
+    .project1, .project2 {
+        padding: 15px;
+        margin: 10px auto;
+    }
+}
+
+/* Internship Styling */
+
+.internship1, .internship2 {
+    background-color: #333;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid #FFDB58; /* Add border to differentiate */
+}
+
+.internship1 h3, .internship2 h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #FFDB58;
+}
+
+.internship1 p, .internship2 p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.internship1 strong, .internship2 strong {
+    color: #FFDB58;
+}
+
+@media (max-width: 768px) {
+    .internship1, .internship2 {
+        padding: 15px;
+        margin: 10px auto;
+    }
+}
+
+/* Contact Section Styles */
+
+
+
+.contact-me {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-me p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+form {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 2px solid #FFDB58;
+    border-radius: 10px;
+    background-color: #333;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+}
+
+form input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFDB58;
+    color: #000;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #FFD700;
+    color: #fff;
+}
+
+.social-media-box {
+    border: 2px solid #FFDB58;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    animation: movingBorder 3s linear infinite;
+}
+
+@keyframes movingBorder {
+    0% {
+        border-radius: 15px;
+    }
+    50% {
+        border-radius: 30px;
+    }
+    100% {
+        border-radius: 15px;
+    }
+}
+
+.social-media-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-media-links li {
+    display: inline-block;
+}
+
+.social-media-links a img {
+    width: 30px;  /* Reduced size */
+    height: 30px; /* Reduced size */
+    transition: transform 0.3s, filter 0.3s, border-color 0.3s;
+    filter: grayscale(100%);
+    border: 2px solid #FFDB58; /* Border for icons */
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.social-media-links a img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    border-color: #FFD700; /* Hover effect for border color */
+}
