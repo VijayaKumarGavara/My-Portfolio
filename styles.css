@@ -12,6 +12,30 @@ body {
     background-color: black;
     color: white;
     margin: 0;
+    font-size: 16px;
+}
+@media (max-width: 1200px) {
+    body {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 12px;
+    }
 }
 
 /* Navbar Styles */
@@ -186,6 +210,23 @@ body {
 .right-section p {
     font-size: 1.2em;
     line-height: 1.6;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .left-section {
+        position: relative;
+        height: auto;
+    }
 }
 
 /* Table Styling */
